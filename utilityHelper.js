@@ -1,5 +1,13 @@
 import { createHashHistory } from 'history';
 
+// method create :apiCall
+// passing perameter should be object.
+// request = { url: 'xyz/zyz', 
+//              method: 'GET', 
+//               data: {id: 1, 
+//                     name: 'john'
+//                     }(optional)
+//            }
 export function apiCall(request) {
     const browserHistory = createHashHistory();
 
@@ -13,10 +21,6 @@ export function apiCall(request) {
                 'Content-Type': 'application/json',
             },
         };
-        // method is get
-        // assign data to queryParams
-
-        // loop the queryParams and convert to query params
 
         let fetchUrl = process.env.MIX_REACT_APP_DOMAIN_URL + '/api/' + request.url;
 
